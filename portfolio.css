@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap");
+
+*{
+margin: 0;
+padding: 0%;
+box-sizing: border-box;
+scroll-behavior: smooth;
+}
+
+.wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+}
+.logo-container{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+}
+.logo-text{
+    margin-left: 1.2rem;
+    font-size: 28px;
+}
+.nav-items{
+    display: flex;
+    gap:  3rem;
+    padding: 0 4rem;
+}
+.nav-items div{
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.nav-items div:hover{
+    font-weight: bold;
+    transition: 2s;
+}
+.HOME{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5rem;
+    margin: 4rem auto;
+    padding: 0 1rem;
+    padding-bottom: 8rem;
+}
+.faded-text{
+    user-select: none;
+    font-size: 7rem;
+    color: rgb(231, 231, 231);
+    bottom: -16%;
+    left: -5%;
+    font-weight: bold;
+    transition: all 3s;
+    position: absolute;
+}
+.card-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+#heading{
+    font-size: 35px;
+    color: #343d68;
+    font-weight: 500;
+}
+#name{
+    color: #4e45d5;
+    font-weight: 800;
+}
+#subheading{
+    font-size: 45px;
+    line-height: 45px;
+}
+#card-description{
+    margin-top: 1rem;
+    width: 70%;
+    font-weight: 500;
+}
+.button{
+    display: block;
+    margin: 0.5em 0 0.5em 0;
+    background-color: white;
+    width: 20%;
+    padding: 1em 0;
+    color: black;
+    border: 0.5px solid black;
+    border-radius: 30px;
+    outline: none;
+    cursor: pointer;
+}
+.card-image{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+.userimage{
+    padding: 2.5rem;
+    filter: grayscale(1);
+    transition: all 1s;
+    animation: scaleimage 5s linear infinite ;
+}
+.userimage img{
+    z-index: -10;
+
+}
+
+@keyframes scaleImage {
+    0%{
+        filter: grayscale(1);
+        transform: scale(1);
+       
+    }
+
+    50%{
+        filter: grayscale(0);
+        transform: scale(1);
+
+    }
+
+    100%{
+        filter: grayscale(1);
+        transform: scale(0);
+
+    }
+}
+
+
+.icon-dot{
+    z-index:9;
+    bottom:-1rem;
+    right:0;
+    animation-name:dotsAnimation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes dotsAnimation {
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+    
+  }
+
+  .icon-cube{
+    z-index:9;
+    top:-0.8em;
+    right:1em;
+    animation-name: cubeRotate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes cubeRotate {
+    0%{
+        transform: rotateY(0deg) translateY(0px);
+    }
+    50%{
+        transform:  rotateY(180deg) translateY(-12px);
+    }
+    100%{
+        transform:  rotateY(360deg) translateY(0px);
+    }
+  }
+
+  .icon-circle{
+    z-index:9;
+    left:0;
+    bottom:0;
+    animation-name:shakeEffect;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+} 
+ @keyframes shakeEffect {
+  
+    50%{
+        left:5%;
+        bottom:10%;
+    }
+ 
+  }
+
+  .icon-zigzags{
+    z-index:9;
+    top:1.5em;
+    left:-0.3em;
+    animation:zigzagAnimation 5s ease-in infinite;
+  }
+
+  @keyframes zigzagAnimation{
+    50%{
+        left:5%;
+        top:2%;
+    }
+  }
+  .icon-plus{
+    z-index:9;
+    top:-0.8rem;
+    left: 50%;
+    animation:shakeEffectPlus 5s ease-in infinite;
+  }
+
+  @keyframes shakeEffectPlus {
+    50%{
+        top:3%;
+        left:48%
+    }
+  }
